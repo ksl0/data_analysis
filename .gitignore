@@ -1,0 +1,7 @@
+venv
+kaggle/myvenv
+*.txt
+webscraping/
+*venv
+kaggle/coop
+

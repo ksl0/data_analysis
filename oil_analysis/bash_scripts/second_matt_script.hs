@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/x-www-form-urlencoded" -d "itype=insp&operator_name_number=name&facility_name_number=name&maxrec=25&Button1=Submit" http://cogcc.state.co.us/cogis/IncidentSearch2.asp 
