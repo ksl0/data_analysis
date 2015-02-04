@@ -6,6 +6,7 @@ import urllib
 import urllib2
 import urlparse
 import time
+from bs4 import BeautifulSoup 
 
 # see https://cogcc.state.co.us/COGIS_Help/API_County_codes.pdf
 timeStart = time.time()
@@ -37,11 +38,12 @@ data = urllib.urlencode(values)
 req  = urllib2.Request(url, data, headers)
 r = urllib2.urlopen(req)
 
+soup = BeautifulSoup(r)
 timeEnd = time.time()
 total_time = timeEnd - timeStart
 
 print total_time 
-print r.read()
+
 ## the opening of files for later
 """
 predictions_file = open('../csv/output.csv', 'wb')
@@ -49,4 +51,5 @@ p = csv.writer(predictions_file)
 p.writerow(["PassengerId", "Survived"])
 test_file.close()
 predictions_file.close() """
+
 
